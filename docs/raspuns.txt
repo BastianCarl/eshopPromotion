@@ -1,0 +1,34 @@
+Sequence diagram (UML, comportamentală cum functioneaza)
+    descrie un scenariu prin schimbul de mesaje dintre participanți, ordonat în timp
+    participanți pe orizontală, timpul pe verticală
+
+Flowchart / diagramă de flux (comportamentală, cum funcționează)
+    descrie un proces prin succesiunea pașilor și a deciziilor, ca graf orientat
+    noduri = pași, decizii, start/sfârșit; săgeți = ordinea de execuție
+
+ER diagram (structurală, cum e organizată)
+    descrie entitățile, atributele lor și relațiile dintre ele
+    relațiile au cardinalitate (1:1, 1:N, N:M)
+
+event bus
+    canal de comunicare între componente fără ca ele să se știe una pe alta,
+    bazat pe evenimente (publish/subscribe)
+    - publisher-ul nu știe cine ascultă și nici dacă ascultă cineva
+    - evenimentul = ceva ce s-a întâmplat deja (nume la trecut: OrderPlaced)
+    - in-process (Spring ApplicationEventPublisher) vs. broker (Kafka, RabbitMQ)
+
+Index
+    Object of db usually implemented as data structure(b-tree, hashTable)\
+    used to find the right date instead of going through each row(acts as a map)
+
+@ManyToOne(optional = false ce face?
+        nu poate sa fie null (nu poate sa exist un order fara user)
+
+N+1
+    avoid making an expensive call for each element, instead make one that brings all the required information
+    each call has an inherent cost, so N calls pay that cost N times, while one batched call pays it once
+
+package-info.java is the file where you declare things about a package as a whole, rather than about a specific class.
+What it’s for
+    Package-level annotations: the only place in Java where you can annotate a package (@NullMarked, @XmlSchema, @ApplicationModule, @Deprecated).
+    Package Javadoc: the /** ... */ comment above the declaration becomes the package description in the generated docs.
